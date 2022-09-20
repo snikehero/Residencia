@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<QCARInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="QCAR_Dataset_info.xsd">
+    <TargetSet version="3.4">
+        <AreaTarget version="5.0" bbox="-5.6123 -1.1174 -6.6896 3.7651 1.9709 2.6181" targetId="d2449515f7eb44c99a63528ecb9e1ba5" name="LABTICV2" pathAuthoring="d2449515f7eb44c99a63528ecb9e1ba5_authoring.glb" pathOcclusion="d2449515f7eb44c99a63528ecb9e1ba5_occlusion.3dt" pathNavMesh="d2449515f7eb44c99a63528ecb9e1ba5_navmesh.glb" />
+    </TargetSet>
+</QCARInfo>
