@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<QCARInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="QCAR_Dataset_info.xsd">
+    <TargetSet version="3.4">
+        <AreaTarget version="5.0" bbox="-4.1275 -1.6412 -1.5370 4.2826 1.4618 8.8472" targetId="c14c5ff130594cc4ab1dc61f1e0f2db8" name="LabRobotica" pathAuthoring="c14c5ff130594cc4ab1dc61f1e0f2db8_authoring.glb" pathOcclusion="c14c5ff130594cc4ab1dc61f1e0f2db8_occlusion.3dt" pathNavMesh="c14c5ff130594cc4ab1dc61f1e0f2db8_navmesh.glb" />
+    </TargetSet>
+</QCARInfo>
