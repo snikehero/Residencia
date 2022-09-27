@@ -12,6 +12,7 @@ public class InitialInstructions : MonoBehaviour
     public TextMeshProUGUI content;
     public static InitialInstructions instance;
     public GameObject[] tooltips;
+    public Animator robotAnimator;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -36,10 +37,9 @@ public class InitialInstructions : MonoBehaviour
             case 1:
                 Clear();
                 tooltips[0].SetActive(true);
-               
                 title.text = "Paso 1";
                 content.text = "Este es el paso 1";
-                
+                robotAnimator.Play("MoveRobotOn");
                 break;
             case 2:
                 Clear();
@@ -72,25 +72,13 @@ public class InitialInstructions : MonoBehaviour
         tooltips[2].SetActive(false);
         tooltips[3].SetActive(false);
     }
-    public void Paso1()
+    public void FullClear()
     {
-        title.text = "Paso 1";
-        content.text = "Este es el paso 1";
-        
+        tooltips[0].SetActive(false);
+        tooltips[1].SetActive(false);
+        tooltips[2].SetActive(false);
+        tooltips[3].SetActive(false);
+        HandMenuScript.instance.i = 0;
     }
-   public void Paso2()
-    {
-        title.text = "Paso 2";
-        content.text = "Este es el paso 2";
-    }
-    public void Paso3()
-    {
-        title.text = "Paso 3";
-        content.text = "Este es el paso 3";
-    }
-    public void Paso4()
-    {
-        title.text = "Paso 4";
-        content.text = "Este es el paso 4";
-    }
+
 }

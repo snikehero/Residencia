@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class HandMenuScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public Animator robotAnimator;
+    // Start is called before the first frame update 
     public GameObject instructions;
+    public static HandMenuScript instance;
     public int i = 0;
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+            Destroy(this);
+        else
+            instance = this;
+    }
 
     void Start()
     {
@@ -23,32 +30,19 @@ public class HandMenuScript : MonoBehaviour
     public void Next()
     {
         Debug.Log("Next Presionado");
-        InitialInstructions.instance.Step(i);
-        robotAnimator.Play("MoveRobotOn");
-        
         i++;
+        InitialInstructions.instance.Step(i);
+        
     }
     public void Last()
     {
         Debug.Log("Last Presionado");
-        InitialInstructions.instance.Step(i);
         i--;
+        InitialInstructions.instance.Step(i);
+        
     }
-
-    //public void Button1()
-    //{
-    //    Debug.Log("Boton 1 presionado");
-    //    InitialInstructions.instance.Paso1();
-    //}
-    //public void Button2()
-    //{
-    //    Debug.Log("Boton 2 presionado");
-    //    InitialInstructions.instance.Paso2();
-    //}
-    //public void Button3()
-    //{
-    //    Debug.Log("Boton 3 presionado");
-    //    InitialInstructions.instance.Paso3();
-    //}
-
+    public void Test()
+    {
+        Debug.Log("Test");
+    }
 }
