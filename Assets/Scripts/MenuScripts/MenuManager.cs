@@ -22,6 +22,8 @@ public class MenuManager : MonoBehaviour
 
     public GameObject nextButton;
     public GameObject lastButton;
+    public GameObject nextButtonOn;
+    public GameObject lastButtonOff;
 
 
 
@@ -63,17 +65,21 @@ public class MenuManager : MonoBehaviour
     {
         nextButton.SetActive(true);
         lastButton.SetActive(true);
-        InitialInstructions.instance.title.text = "Encendido/Apagado";
-        InitialInstructions.instance.content.text = "Bienvenido a Encendido/Apagado del robot Kuka, mediante las flechas de avance y retroceso conoceras el proceso de encedido y apagado del robot";
+        nextButtonOn.SetActive(false);
+        lastButtonOff.SetActive(false);
+        InitialInstructions.instance.title.text = "Componentes Del Robot";
+        InitialInstructions.instance.content.text = "Bienvenido a la muestra de componentes y partes que consituyen el sistema completo de un robot KUKA, mediante las flechas de avance y retroceso conoceras cada uno de sus partes ";
         InitialInstructions.instance.FullClear();
     }
-    public void InitialPosEnabled()
+    public void InitialPosEnabled() //Proceso de Encendido Y apagado del robot
     {
         nextButton.SetActive(false);
         lastButton.SetActive(false);
+        nextButtonOn.SetActive(true);
+        lastButtonOff.SetActive(true);
         InitialInstructions.instance.FullClear();
-        InitialInstructions.instance.title.text = "Posicion inicial";
-        InitialInstructions.instance.content.text = "Esta es la posicion inicial";
+        InitialInstructions.instance.title.text = "Encendido Y Apagado";
+        InitialInstructions.instance.content.text = "A continuacion se mostrara el proceso de Encendido y Apagado del robot KUKA";
     }
     public void ButtonSimulationEnabled()
     {
