@@ -144,6 +144,11 @@ public class InitialInstructions : MonoBehaviour
                 title.text = "Muñeca";
                 content.text = "El robot está equipado con una muñeca en línea de 3 ejes. La muñeca en línea consta de los ejes 4, 5 y 6.";
                 break;
+            case 19:
+                Clear();
+                title.text = "Fin";
+                content.text = "Has terminado con los compontentes del robot, porfavor dirigete al apartado de encendido/apagado";
+                break;
 
 
 
@@ -163,6 +168,12 @@ public class InitialInstructions : MonoBehaviour
         tooltips[9].SetActive(false);
         tooltips[10].SetActive(false);
         tooltips[11].SetActive(false);
+        tooltips[12].SetActive(false);
+        tooltips[13].SetActive(false);
+        tooltips[14].SetActive(false);
+        tooltips[15].SetActive(false);
+        tooltips[16].SetActive(false);
+        tooltips[17].SetActive(false);
     }
     public void FullClear()
     {

@@ -70,6 +70,7 @@ public class MenuManager : MonoBehaviour
         InitialInstructions.instance.title.text = "Componentes Del Robot";
         InitialInstructions.instance.content.text = "Bienvenido a la muestra de componentes y partes que consituyen el sistema completo de un robot KUKA, mediante las flechas de avance y retroceso conoceras cada uno de sus partes ";
         InitialInstructions.instance.FullClear();
+        OnOffProcess.instance.FullClear();
     }
     public void InitialPosEnabled() //Proceso de Encendido Y apagado del robot
     {
@@ -79,7 +80,8 @@ public class MenuManager : MonoBehaviour
         lastButtonOff.SetActive(true);
         InitialInstructions.instance.FullClear();
         InitialInstructions.instance.title.text = "Encendido Y Apagado";
-        InitialInstructions.instance.content.text = "A continuacion se mostrara el proceso de Encendido y Apagado del robot KUKA";
+        InitialInstructions.instance.content.text = "A continuacion se mostrara el proceso de Encendido y Apagado del robot KUKA, mediante las flechas de avance y retroceso conoceras el proceso de encendido y apagado del robot KUKA";
+        OnOffProcess.instance.FullClear();
     }
     public void ButtonSimulationEnabled()
     {
@@ -89,6 +91,7 @@ public class MenuManager : MonoBehaviour
         trainingButton.SetActive(false);
         InitialInstructions.instance.title.text = "Menu de Simulacion";
         InitialInstructions.instance.content.text = "Este es el Menu de Simulacion";
+    
     }
     public void ReturnToMenu()
     {
@@ -99,6 +102,7 @@ public class MenuManager : MonoBehaviour
         InitialInstructions.instance.title.text = "Simulacion de robot KUKA";
         InitialInstructions.instance.content.text = "Bienvenido al sistema de simulacion del robot KUKA";
         InitialInstructions.instance.FullClear();
+        OnOffProcess.instance.FullClear();
         AreaManager.instance.TurnOff();
     }
     
